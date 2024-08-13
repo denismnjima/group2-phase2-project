@@ -1,8 +1,64 @@
-# React + Vite
+# Culinary Voyage
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Culinary Voyage is a React project designed to showcase and search for recipes. It allows users to explore a variety of recipes and provides advanced search capabilities, such as filtering by ingredients.
 
-Currently, two official plugins are available:
+## Running and Testing
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To run and test the project, follow these steps:
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone <repository_url>
+   ```
+   ```bash
+    cd Culinary-Voyage
+    ``` 
+2. **Install depedencies**
+    ``` bash
+    npm install
+    ```
+3. **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+## file structure
+```arduino
+Culinary-Voyage
+├── public
+├── src
+│   ├── assets
+│   │   └── react.svg
+│   ├── Components
+│   │   ├── FeaturedRecipe.jsx
+│   │   ├── FilterSearch.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── RecipeCard.jsx
+│   │   └── RecipesContainer.jsx
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package.json
+├── README.md
+└── vite.config.js
+
+```
+### Components
+FeaturedRecipe.jsx: Displays the featured recipe on the homepage, showcasing the most popular or highlighted recipe.
+
+__FilterSearch.jsx__: Handles the advanced search functionality, allowing users to filter recipes based on various ingredients or criteria.
+
+__Footer.jsx__: The footer section of the application, containing links and other information.
+
+__Hero.jsx__: The hero section at the top of the homepage, typically used for a large, prominent image or message.
+
+__Navbar.jsx__: The navigation bar that allows users to navigate between different sections of the application.
+
+__RecipeCard.jsx__: A card component that displays individual recipe details, such as the image, title, and a brief description.
+
+__RecipesContainer.jsx__: A container component that holds and manages multiple RecipeCard components, displaying a list of recipes.
