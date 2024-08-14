@@ -1,8 +1,311 @@
+
 *{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 :root{
   --color:#F0716A;
   --color:#CA8865;
   --color3:#666666;
+}
+.footer{
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+}
+.footer-information{
+  display: flex;
+  color: #666666;
+}
+.footer-information p{
+  font-size: 15px;
+}
+.footer-icons{
+  width: 40%;
+}
+.icon{
+  margin: 5px;
+  background-color: #F0716A;
+  color: white;
+  padding: 5px;
+  font-size: 15px;
+  border-radius: 5px;
+}
+.recipeDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5; /* Light wood-like background */
+}
+
+.recipeDetails img {
+  width: 100%; /* Make the image responsive */
+  max-width: 800px; /* Ensure the image doesn't get too large */
+  height: auto;
+  border-radius: 10px; /* Slight rounding on corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.recipeDetails h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 36px;
+  color: #666; /* Darker text color */
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.recipeDetails h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333; /* Darker color for emphasis */
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.recipeDetails p {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+  max-width: 800px; /* Align width with the image */
+}
+.Procedure {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adds space between the steps */
+  padding: 20px;
+  background-color: #f5f5f5; /* Light wood-like background */
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  padding: 20px;
+  position: relative;
+  border-left: 8px solid #ff6f61; /* Adds a left border in the color of your choice */
+}
+
+.step h3 {
+  background-color: #ff6f61; /* The background color for the number box */
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  position: absolute;
+  left: -35px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.step p {
+  margin-left: 50px; /* Space between the number and the text */
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+}
+.homepage{
+  background-image: url(./assets/wood.jpg);
+  padding: 0 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.featuredRecipe{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
+  margin: 10px auto;
+}
+.featuredRecipe img{
+  height: auto;
+  width: 50%;
+  display: flex;
+  position: relative;
+}
+.featuredRecipe h1{
+  border: #F0716A;
+  box-sizing: border-box;
+  /* position: absolute;
+  top: 10px;
+  left: 3px; */
+  background-color: var(--color);
+  padding: 5px;
+  padding-right: 10px;
+  color: white;
+  font-size: 20px;
+  text-align: right;
+
+}
+.featuredRecipe button{
+  width: 259px;
+  height: 40px;
+  font-size: 18px;
+  background-color: #F0716A;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.past button{
+  height: 100px;
+  font-size: 40px;
+  background-color: transparent;
+}
+.featured-recipe-content{
+  padding: 10px;
+}
+#pointer {
+  width: 200px;
+  height: 40px;
+  position: relative;
+  background: #F0716A;
+  color: white;
+  text-align: right;
+}
+.recipesContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+.indRecipe{
+  width: 30%;
+  height: auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
+  margin: 10px;
+
+}
+.indRecipe img{
+  width: 100%;
+  height: 200px;
+  border-radius: 10px 10px;
+}
+.featuredRecipe{
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  position: relative;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
+  margin: 10px auto;
+}
+.featuredRecipe img{
+  height: auto;
+  width: 50%;
+  display: flex;
+}
+.featuredRecipe h1{
+  border: #F0716A;
+  box-sizing: border-box;
+  position: absolute;
+  top: 10px;
+  left: 3px;
+  background-color: var(--color);
+  padding: 5px;
+  padding-right: 10px;
+  color: white;
+  font-size: 20px;
+  text-align: right;
+
+}
+.featuredRecipe button{
+  width: 259px;
+  height: 40px;
+  font-size: 18px;
+  background-color: #F0716A;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.past button{
+  height: 100px;
+  font-size: 40px;
+  background-color: transparent;
+}
+.featured-recipe-content{
+  padding: 10px;
+}
+#pointer {
+  width: 200px;
+  height: 40px;
+  position: relative;
+  background: #F0716A;
+  color: white;
+  text-align: right;
+}
+#pointer:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid white;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+#pointer:before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid #F0716A;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+.recipesContainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+.indRecipe{
+  width: 30%;
+  height: auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
+  margin: 10px;
+
+}
+.indRecipe img{
+  width: 100%;
+  height: 200px;
+  border-radius: 10px 10px;
+}
+@media only screen and (max-width:768px){
+  .featuredRecipe{
+    flex-direction: column;
+  }
+.featuredRecipe img{
+  width: 100%;
+  height: 250px;
+}
+.indRecipe{
+  width: 90%;
+}
+}
+@media only screen and (max-width:768px){
+  .featuredRecipe{
+    flex-direction: column;
+  }
+.featuredRecipe img{
+  width: 100%;
+  height: 250px;
+}
+.indRecipe{
+  width: 90%;
+}
 }

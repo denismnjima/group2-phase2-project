@@ -1,7 +1,12 @@
-
+import { Route,Routes } from "react-router-dom"
+import Homapage from "./Components/Homapage"
 function App() {
   return (
-    <div>App</div>
+    <div className="App">
+    <Routes>
+      <Route path="/" element={<Homapage />}></Route>
+    </Routes>
+    </div>
   )
 }
 
