@@ -1,7 +1,10 @@
+import RecipeDetails from "./Components/RecipeDetails"
 
 function App() {
   return (
-    <div>App</div>
+    <div>
+      <RecipeDetails/>
+    </div>
   )
 }
 

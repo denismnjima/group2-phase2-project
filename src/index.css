@@ -29,3 +29,87 @@
   font-size: 15px;
   border-radius: 5px;
 }
+.recipeDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5; /* Light wood-like background */
+}
+
+.recipeDetails img {
+  width: 100%; /* Make the image responsive */
+  max-width: 800px; /* Ensure the image doesn't get too large */
+  height: auto;
+  border-radius: 10px; /* Slight rounding on corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.recipeDetails h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 36px;
+  color: #666; /* Darker text color */
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.recipeDetails h2 {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333; /* Darker color for emphasis */
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.recipeDetails p {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+  max-width: 800px; /* Align width with the image */
+}
+.Procedure {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adds space between the steps */
+  padding: 20px;
+  background-color: #f5f5f5; /* Light wood-like background */
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  padding: 20px;
+  position: relative;
+  border-left: 8px solid #ff6f61; /* Adds a left border in the color of your choice */
+}
+
+.step h3 {
+  background-color: #ff6f61; /* The background color for the number box */
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  position: absolute;
+  left: -35px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.step p {
+  margin-left: 50px; /* Space between the number and the text */
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+}
