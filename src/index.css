@@ -3,6 +3,8 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  color: #333;
 }
 :root{
   --color:#F0716A;
@@ -118,10 +120,10 @@
 }
 .homepage{
   background-image: url(./assets/wood.jpg);
-  padding: 0 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 .featuredRecipe{
   display: flex;
@@ -130,6 +132,7 @@
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
   margin: 10px auto;
+  margin-top: 20px;
 }
 .featuredRecipe img{
   height: auto;
@@ -201,24 +204,24 @@
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
   margin: 10px auto;
+  border-radius: 10px;
 }
 .featuredRecipe img{
   height: auto;
   width: 50%;
   display: flex;
+  border-radius: 10px 0 0 10px ;
 }
 .featuredRecipe h1{
   border: #F0716A;
   box-sizing: border-box;
-  position: absolute;
-  top: 10px;
-  left: 3px;
   background-color: var(--color);
   padding: 5px;
   padding-right: 10px;
   color: white;
   font-size: 20px;
   text-align: right;
+  
 
 }
 .featuredRecipe button{
@@ -260,7 +263,6 @@
 #pointer:before {
   content: "";
   position: absolute;
-  right: -20px;
   bottom: 0;
   width: 0;
   height: 0;
@@ -273,17 +275,129 @@
   flex-wrap: wrap;
 }
 .indRecipe{
-  width: 30%;
+  width: 21%;
   height: auto;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
   margin: 10px;
-
+  border-radius: 10px;
+}
+.indRecipe span{
+  display: block;
+  padding: 10px;
 }
 .indRecipe img{
   width: 100%;
   height: 200px;
-  border-radius: 10px 10px;
+  border-radius: 10px 10px 0 0;
+}
+.indRecipe h3{
+  padding: 5px;
+}
+main{
+  height: 70vh;
+  background: url(/src/assets/pizaa.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+header{
+  display: flex;
+  width: 100%;
+  padding-top: 10px;
+  background-color: white;
+  margin: 0 auto;
+  justify-content: space-between;
+
+}
+header nav ul{
+  display: flex;
+  list-style: none;
+}
+header nav ul li{
+  margin: 5px;
+  padding: 5px;
+
+}
+header nav ul li:hover{
+  background-color: #F0716A;
+  color: white;
+  border-radius: 5px;
+}
+header .top-button{
+  background-color: #F0716A;
+  padding: 10px;
+  font-size: 30px;
+  color: white;
+  
+}
+.logo span{
+  color: #F0716A;
+}
+.form-conatiner{
+  background-color: white;
+  width: fit-content;
+  padding: 20px;
+  margin: 10px auto;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+.form-conatiner .content{
+  padding: 10px;
+  text-align: center;
+}
+.form-conatiner form{
+  padding: 20px;
+}
+.form-conatiner form input {
+  height: 40px;
+  width: 100%;
+  border: 1px solid #666666;
+  border-radius: 5px;
+}
+.form-conatiner form input[type='checkbox']{
+  display: none;
+}
+.form-conatiner form label{
+  background-color: #CA8865;
+  padding: 7px 14px;
+  border-radius: 20px;
+  margin: 5px;
+  color: white;
+}
+.choices{
+  margin-top: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+.form-conatiner form input[type='checkbox']:checked+label{
+  background-color: #F0716A;
+}
+.form-conatiner form button{
+  background-color: #F0716A;
+  height: 50px;
+  margin: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+
+}
+.recipes-page{
+  background: url(./assets/wood.jpg);
+  background-attachment: fixed;
+}
+.recipes-page h2{
+  padding: 10px;
+  color: #333;
+  text-align: center;
+}
+@media only screen and (max-width:1000px){
+.indRecipe{
+   width: 30%;
+}
 }
 @media only screen and (max-width:768px){
   .featuredRecipe{
@@ -306,6 +420,9 @@
   height: 250px;
 }
 .indRecipe{
-  width: 90%;
+  width: 100%;
+}
+.logo{
+  display: none;
 }
 }

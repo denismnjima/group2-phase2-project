@@ -9,6 +9,10 @@ function RecipesContainer() {
         <RecipeCard/>
         <RecipeCard/>
         <RecipeCard/>
+        <RecipeCard/>
+        <RecipeCard/>
+        <RecipeCard/>
+        <RecipeCard/>
       </div>
     </div>
   )
