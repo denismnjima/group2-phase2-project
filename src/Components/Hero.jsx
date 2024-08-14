@@ -1,7 +1,12 @@
+import Navbar from "./Navbar"
+import FilterBar from "./FilterBar"
 
 function Hero() {
   return (
-    <div>Hero</div>
+    <main>
+      <Navbar />
+      <FilterBar/>
+    </main>
   )
 }
 
