@@ -39,21 +39,21 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: #f5f5f5; /* Light wood-like background */
+  background-color: #f5f5f5; 
 }
 
 .recipeDetails img {
-  width: 100%; /* Make the image responsive */
-  max-width: 800px; /* Ensure the image doesn't get too large */
+  width: 100%; 
+  max-width: 800px; 
   height: auto;
-  border-radius: 10px; /* Slight rounding on corners */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  border-radius: 10px; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .recipeDetails h1 {
   font-family: 'Arial', sans-serif;
   font-size: 36px;
-  color: #666; /* Darker text color */
+  color: #666; 
   margin-top: 0;
   margin-bottom: 20px;
   text-align: center;
@@ -63,7 +63,7 @@
   font-family: 'Arial', sans-serif;
   font-size: 18px;
   font-weight: bold;
-  color: #333; /* Darker color for emphasis */
+  color: #333; 
   margin-top: 20px;
   margin-bottom: 10px;
   text-align: center;
@@ -75,14 +75,14 @@
   line-height: 1.6;
   color: #333;
   text-align: justify;
-  max-width: 800px; /* Align width with the image */
+  max-width: 800px;
 }
 .Procedure {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Adds space between the steps */
+  gap: 20px;
   padding: 20px;
-  background-color: #f5f5f5; /* Light wood-like background */
+  background-color: #f5f5f5; 
 }
 
 .step {
@@ -90,14 +90,14 @@
   align-items: center;
   background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
   padding: 20px;
   position: relative;
-  border-left: 8px solid #ff6f61; /* Adds a left border in the color of your choice */
+  border-left: 8px solid #ff6f61; 
 }
 
 .step h3 {
-  background-color: #ff6f61; /* The background color for the number box */
+  background-color: #ff6f61; 
   color: #fff;
   font-size: 24px;
   font-weight: bold;
@@ -111,7 +111,7 @@
 }
 
 .step p {
-  margin-left: 50px; /* Space between the number and the text */
+  margin-left: 50px; 
   font-family: 'Arial', sans-serif;
   font-size: 16px;
   line-height: 1.6;
