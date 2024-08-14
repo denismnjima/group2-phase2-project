@@ -1,7 +1,13 @@
+import FeaturedRecipe from "./Components/FeaturedRecipe"
+import RecipesContainer from "./Components/RecipesContainer"
 
 function App() {
   return (
-    <div>App</div>
+    <div>App
+    <RecipesContainer/>
+    
+    </div>
+    
   )
 }
 
