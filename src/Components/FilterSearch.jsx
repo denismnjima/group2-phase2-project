@@ -9,7 +9,7 @@ function FilterBar({ onSearch }) {
   return (
     <div className="form-conatiner">
       <div className='content'>
-      <h1>welcome to the culinery voyage recipe</h1>
+      <h1>WELCOME TO CULINARY VOYAGE RECIPE</h1>
       <p className='paragragh'>All you need to do is enter an ingredient, a dish or a keyword.<br></br>You can also select a specific tag from the dropdown. There’s sure to be something tempting for you to try.
 
 Enjoy!</p>
