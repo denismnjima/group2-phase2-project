@@ -6,6 +6,7 @@ import { fetchRandom } from "./Services"
 import { useEffect } from "react"
 import {useRecipe} from './Hooks/recipeStore'
 import SingleRecipepage from "./Components/SingleRecipepage"
+import Login from "./Components/Login"
 function App() {
   const {random, setRandom} = useRecipe((state)=>({
     random:state.random,
@@ -24,7 +25,7 @@ function App() {
   return (
     <div className="App">
     <Routes>
-      <Route path="/" element={<Homapage />}></Route>
+      <Route path="/" element={<Login/>}></Route>
       <Route path="/recipes" element={<RecipesPage />}></Route>
       <Route path="/favourites" element={<FavouritesPage />}></Route>
       <Route path="/view" element={<SingleRecipepage />}></Route>
