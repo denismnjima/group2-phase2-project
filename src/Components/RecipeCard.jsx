@@ -1,12 +1,22 @@
-import image1 from "../assets/burger.jpg"
-import * as Icon from 'react-bootstrap-icons'
-function RecipeCard() {
+import { useCurrentRecipe } from "../Hooks/currentRecipeStore"
+import { useNavigate } from "react-router-dom"
+function RecipeCard(props) {
+  const {recipe} = props
+  const setCurrentRecipe = useCurrentRecipe((state)=>state.setCurrentRecipe)
+  const navigate = useNavigate()
+  const goToViewRecipe=()=>{
+    let data = []
+    data.push(recipe)
+    setCurrentRecipe(data)
+    navigate('/view')
+
+  }
   return (
-    <div className="indRecipe">
-      <img src={image1} />
-      <h3>Rustic cheese and pepperoni pizza</h3>
+    <div className="indRecipe" onClick={goToViewRecipe}>
+      <img src={recipe.image} />
+      <h3>{recipe.title}</h3>
       <hr />
-      <span><Icon.Lightbulb/> Easy</span>
+      <span>{recipe.diets[0]==0?'':recipe.diets[0]}</span>
     </div>
   )
 }

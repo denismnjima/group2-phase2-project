@@ -1,13 +1,36 @@
 import pasta from "../assets/pasta.jpg"
+import { useRecipe } from "../Hooks/recipeStore"
+import { useCurrentRecipe } from "../Hooks/currentRecipeStore"
+import parse from 'html-react-parser'
+import { useNavigate } from "react-router-dom"
 function FeaturedRecipe() {
+  const navigate = useNavigate()
+  const {random, setRandom} = useRecipe((state)=>({
+    random:state.random,
+  }))
+  const {currentRecipe,setCurrentRecipe} = useCurrentRecipe((state)=>({
+    currentRecipe:state.currentRecipe,
+    setCurrentRecipe:state.setCurrentRecipe
+  }))
+
+  const goToViewFeatured=()=>{
+    setCurrentRecipe(random)
+    console.log(currentRecipe)
+    navigate('/view')
+
+  }
   return (
+    random.length===0?'':
     <div className="featuredRecipe">
-      <img src={pasta}/>
+      <img src={random[0].image}/>
       <div className="featured-recipe-content">
-        <h1 id="pointer">featured recipe</h1>
-        <h2> spaghetti with rustic bread</h2>
-        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo</p>
-        <button className="featured-button">View REcipe</button>
+        <h1>featured recipe</h1>
+        <h2>{random[0].title}</h2>
+        <p>{parse(random[0].summary)}</p>
+        <button 
+          className="featured-button"
+          onClick={goToViewFeatured}
+        >View REcipe</button>
       </div>
 
   </div>
