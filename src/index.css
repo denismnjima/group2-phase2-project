@@ -205,6 +205,8 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
   margin: 10px auto;
   border-radius: 10px;
+  display: inline-block;
+  padding: 20px;
 }
 .featuredRecipe img{
   height: auto;
@@ -214,14 +216,14 @@
 }
 .featuredRecipe h1{
   border: #F0716A;
-  box-sizing: border-box;
-  background-color: var(--color);
-  padding: 5px;
-  padding-right: 10px;
-  color: white;
+  background-color: transparent;
+  color: rgb(42, 83, 160);
   font-size: 20px;
-  text-align: right;
-  
+  text-align: left;
+  position: absolute;
+  top: 20px;
+  padding:10px;
+
 
 }
 .featuredRecipe button{
@@ -240,35 +242,6 @@
 }
 .featured-recipe-content{
   padding: 10px;
-}
-#pointer {
-  width: 200px;
-  height: 40px;
-  position: relative;
-  background: #F0716A;
-  color: white;
-  text-align: right;
-}
-#pointer:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-left: 20px solid white;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-}
-#pointer:before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-left: 20px solid #F0716A;
-  border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
 }
 .recipesContainer{
   display: flex;
@@ -346,6 +319,8 @@ header .top-button{
 .form-conatiner .content{
   padding: 10px;
   text-align: center;
+  background-color: aqua;
+  border-radius: 0 10px 10px;
 }
 .form-conatiner form{
   padding: 20px;
@@ -414,9 +389,9 @@ header .top-button{
 .indRecipe{
   width: 90%;
 }
+}
 .singleRecipePage{
   padding: 10px 5vh;
-}
 }
 @media only screen and (max-width:768px){
   .featuredRecipe{
