@@ -6,6 +6,8 @@ import { fetchRandom } from "./Services"
 import { useEffect } from "react"
 import {useRecipe} from './Hooks/recipeStore'
 import SingleRecipepage from "./Components/SingleRecipepage"
+import Search from "./Components/Search"
+import Navbar from "./Components/Navbar"
 function App() {
   const {random, setRandom} = useRecipe((state)=>({
     random:state.random,
@@ -23,11 +25,13 @@ function App() {
   }
   return (
     <div className="App">
+    <Navbar/>
     <Routes>
       <Route path="/" element={<Homapage />}></Route>
       <Route path="/recipes" element={<RecipesPage />}></Route>
       <Route path="/favourites" element={<FavouritesPage />}></Route>
       <Route path="/view" element={<SingleRecipepage />}></Route>
+      <Route path="/search" element={<Search />}></Route>
     </Routes>
     </div>
   )

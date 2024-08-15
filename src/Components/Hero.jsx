@@ -4,7 +4,6 @@ import FilterBar from "./FilterSearch"
 function Hero() {
   return (
     <main>
-      <Navbar/>
       <FilterBar/>
     </main>
   )
