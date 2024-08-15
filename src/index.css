@@ -275,7 +275,7 @@
   flex-wrap: wrap;
 }
 .indRecipe{
-  width: 21%;
+  width: 23%;
   height: auto;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
@@ -394,6 +394,10 @@ header .top-button{
   color: #333;
   text-align: center;
 }
+.singleRecipePage{
+  background:url(./assets/wood.jpg);
+  padding: 10px 5vh;
+}
 @media only screen and (max-width:1000px){
 .indRecipe{
    width: 30%;
@@ -410,6 +414,9 @@ header .top-button{
 .indRecipe{
   width: 90%;
 }
+.singleRecipePage{
+  padding: 10px 5vh;
+}
 }
 @media only screen and (max-width:768px){
   .featuredRecipe{
@@ -424,5 +431,8 @@ header .top-button{
 }
 .logo{
   display: none;
+}
+.singleRecipePage{
+  padding: 10px 0;
 }
 }
