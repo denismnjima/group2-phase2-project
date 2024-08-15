@@ -328,6 +328,8 @@ header .top-button{
 .form-conatiner form input {
   height: 40px;
   width: 100%;
+  display: block;
+  margin: 0 auto;
   border: 1px solid #666666;
   border-radius: 5px;
 }
@@ -354,7 +356,8 @@ header .top-button{
 .form-conatiner form button{
   background-color: #F0716A;
   height: 50px;
-  margin: 10px;
+  display: block;
+  margin: 10px auto;
   width: 100%;
   border: none;
   border-radius: 5px;
@@ -373,25 +376,55 @@ header .top-button{
   background:url(./assets/wood.jpg);
   padding: 10px 5vh;
 }
+/* search page */
+.searchPage{
+  background: url(./assets/wood.jpg);
+  min-height: 90vh;
+  padding-top: 20px;
+}
+.searchPage .form-conatiner{
+  width: 70%;
+  padding: 5px;
+  margin-top: 20px;
+}
+.searchPage .form-conatiner .content{
+  display: none;
+}
+.searchPage h2{
+  color: #333;
+  text-align: center;
+}
+.searchPage h2 span{
+  color: #F0716A;
+}
+.searchRes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.searchRes div{
+  background-color: white;
+  padding: 15px;
+  width: 23%;
+  margin: 10px;
+}
+.searchRes div:hover{
+  background-color: #F0716A;
+  color: white;
+}
+.searchRes div img{
+  width: 97%;
+  display: block;
+  margin: 0 auto;
+}
 @media only screen and (max-width:1000px){
 .indRecipe{
    width: 30%;
 }
+.searchRes div{
+  width: 42%;
 }
-@media only screen and (max-width:768px){
-  .featuredRecipe{
-    flex-direction: column;
-  }
-.featuredRecipe img{
-  width: 100%;
-  height: 250px;
-}
-.indRecipe{
-  width: 90%;
-}
-}
-.singleRecipePage{
-  padding: 10px 5vh;
 }
 @media only screen and (max-width:768px){
   .featuredRecipe{
@@ -409,5 +442,13 @@ header .top-button{
 }
 .singleRecipePage{
   padding: 10px 0;
+}
+.searchRes div{
+  width: 90%;
+  border-radius: 10px;
+}
+.searchRes div img{
+  width: 100%;
+  height: 280px;
 }
 }
