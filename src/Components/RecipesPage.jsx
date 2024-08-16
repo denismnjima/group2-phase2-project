@@ -1,19 +1,18 @@
-import FeaturedRecipe from "./FeaturedRecipe"
+import Navbar from "./Navbar"
 import RecipeCard from "./RecipeCard"
 import { useRecipe } from "../Hooks/recipeStore"
-function RecipesContainer() {
+function RecipesPage() {
   const recipe = useRecipe((state)=>state.random)
   return (
-    <div>
-      <FeaturedRecipe/>
-      <h2 id="pointer">Latest Recipe</h2>
-      <div className="recipesContainer">
+    <div className="recipes-page">
+        <h2>Recipes</h2>
+        <div className="recipesContainer">
         {recipe.length===0?'':recipe.map((single)=>{
           return(<RecipeCard recipe={single} key={single.id}/>)
         })}
-      </div>
+        </div>
     </div>
   )
 }
 
-export default RecipesContainer
+export default RecipesPage

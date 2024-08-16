@@ -1,0 +1,22 @@
+.divcontained{
+    padding: 30px;
+    margin: 20px;
+    background-color: bisque;
+    border-radius: 0 20px;
+
+}
+.login-btn:hover{
+    background-color: bisque;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+.divcontained input{
+ border-radius: 0 10px 6px;
+padding: 6px;
+margin: 6px;
+}
+.divcontained button{
+    background-color: rgb(177, 177, 185);
+    border-radius: 0 6px 6px;
+    box-shadow: 0 5px rosybrown;
+}

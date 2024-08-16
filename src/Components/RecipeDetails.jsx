@@ -1,30 +1,87 @@
-import React from 'react'
 import pizza from '../assets/pizaa.jpg'
-
+import { useCurrentRecipe } from '../Hooks/currentRecipeStore'
+import { useFavourites } from '../Hooks/favouriteStore'
+import parse from 'html-react-parser'
 function RecipeDetails() {
+    const currentRecipe = useCurrentRecipe((state)=>state.currentRecipe)
+    const {favorites,setFavourites} = useFavourites((state)=>({
+      favorites:state.favorites,
+      setFavourites:state.setFavourites
+    }))
+    function makeFav(){
+      if(currentRecipe[0].id){
+        setFavourites(currentRecipe[0].id)
+        alert('added to favourites')
+      }
+
+    }
   return (
-    <div>
-        <h1>Rustic cheese and pepperoni pizza</h1>
+    currentRecipe.length===0?'':
+    <section className='recipes--stuff'>
+    <div className='recipe-det-cont'>
+        <h1>{currentRecipe[0].title}</h1>
         <section className='recipeDetails'>
-            <img src={pizza} />
-            <h2>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</h2>
-            <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere</p>
+            <img src={currentRecipe[0].image} />
+            <p>{parse(currentRecipe[0].summary)}</p>
         </section>
         <section className='Procedure'>
-            <div className="step">
-                <h3>1</h3>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-            </div>
-            <div className="step">
-                <h3>2</h3>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-            </div>
-            <div className="step">
-                <h3>3</h3>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
-            </div>
+        {
+            currentRecipe[0].analyzedInstructions[0].steps.map((procedure)=>{
+                return(  <div className="step" key={procedure.id}>
+                            <h3>{procedure.number}</h3>
+                            <p>{procedure.step}</p>        
+                        </div>)
+
+             })
+
+               }
         </section>
     </div>
+    <div className='Recipe-Info'>
+      <h4 className='tag-title'>Diets</h4>
+      <div className='tags'>
+      {currentRecipe[0].diets.map((item,index)=>{
+        return(<span key={index}>{item}</span>)
+      })}
+      </div>
+
+      <h4 className='tag-title'>Ocassions</h4>
+      <div className='tags'>
+      {currentRecipe[0].occasions.map((item,index)=>{
+        return(<span key={index}>{item}</span>)
+      })}
+      </div>
+
+
+      <div className='meta'>
+        <div>
+          <p>Preparation time</p>
+          <p>{currentRecipe[0].preparationMinutes} Mins</p>
+        </div>
+        <div>
+          <p>Cooking time</p>
+          <p>{currentRecipe[0].readyInMinutes} Mins</p>
+        </div>
+        <div>
+          <p>Health Score</p>
+          <p>57</p>
+        </div>
+      </div>
+
+      <div className='meta'>
+      {currentRecipe[0].extendedIngredients.map((item,index)=>{
+        return(
+          <div>
+          <p>{item.aisle}</p>
+          <p>{item.amount}</p>
+        </div>
+        )
+      })}
+      </div>
+
+      <button className='favs' onClick={makeFav}>Add To Favourites</button>
+    </div>
+    </section>
 
   )
 }

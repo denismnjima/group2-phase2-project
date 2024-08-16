@@ -1,10 +1,9 @@
 import Navbar from "./Navbar"
-import FilterBar from "./FilterBar"
+import FilterBar from "./FilterSearch"
 
 function Hero() {
   return (
     <main>
-      <Navbar />
       <FilterBar/>
     </main>
   )
