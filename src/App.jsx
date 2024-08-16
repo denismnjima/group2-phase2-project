@@ -8,7 +8,7 @@ import {useRecipe} from './Hooks/recipeStore'
 import SingleRecipepage from "./Components/SingleRecipepage"
 import Search from "./Components/Search"
 import Navbar from "./Components/Navbar"
-import Login from "./Components/Login"
+import UserLoginPage from "./Components/UserLoginPage"
 function App() {
   const {random, setRandom} = useRecipe((state)=>({
     random:state.random,
@@ -28,11 +28,12 @@ function App() {
     <div className="App">
     <Navbar/>
     <Routes>
-      <Route path="/" element={<Login/>}></Route>
+      <Route path="/" element={<Homapage />}></Route>
       <Route path="/recipes" element={<RecipesPage />}></Route>
       <Route path="/favourites" element={<FavouritesPage />}></Route>
       <Route path="/view" element={<SingleRecipepage />}></Route>
       <Route path="/search" element={<Search />}></Route>
+      <Route path="/login" element={<UserLoginPage />}></Route>
     </Routes>
     </div>
   )

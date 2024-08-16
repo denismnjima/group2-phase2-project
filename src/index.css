@@ -39,9 +39,11 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  background-color: #f5f5f5; /* Light wood-like background */
+  background-color: #f5f5f5; 
 }
-
+.recipe-det-cont{
+  width: 60%;
+}
 .recipeDetails img {
   width: 100%; /* Make the image responsive */
   max-width: 800px; /* Ensure the image doesn't get too large */
@@ -127,8 +129,7 @@
 }
 .featuredRecipe{
   display: flex;
-  flex-direction: row;
-  width: 90%;
+  width: 100%;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
   margin: 10px auto;
@@ -198,31 +199,29 @@
 }
 .featuredRecipe{
   display: flex;
-  flex-direction: row;
-  width: 90%;
+  width: 100%;
   position: relative;
   background-color: white;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
-  margin: 10px auto;
-  border-radius: 10px;
-  display: inline-block;
+  margin: 0 auto;
   padding: 20px;
 }
 .featuredRecipe img{
   height: auto;
-  width: 50%;
+  width: 100%;
   display: flex;
+  height: 280px;
   border-radius: 10px 0 0 10px ;
 }
 .featuredRecipe h1{
-  border: #F0716A;
-  background-color: transparent;
-  color: rgb(42, 83, 160);
+  background-color: #F0716A;
   font-size: 20px;
   text-align: left;
   position: absolute;
   top: 20px;
-  padding:10px;
+  padding:5px;
+  margin: 10px;
+  border-radius: 10px;
 
 
 }
@@ -292,6 +291,10 @@ header nav ul li{
   padding: 5px;
 
 }
+header nav span{
+  margin: 5px;
+  padding: 5px;
+}
 header nav ul li:hover{
   background-color: #F0716A;
   color: white;
@@ -319,7 +322,6 @@ header .top-button{
 .form-conatiner .content{
   padding: 10px;
   text-align: center;
-  background-color: aqua;
   border-radius: 0 10px 10px;
 }
 .form-conatiner form{
@@ -417,6 +419,75 @@ header .top-button{
   width: 97%;
   display: block;
   margin: 0 auto;
+}
+/* login page */
+.err{
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  
+}
+.err img{
+  height: 350px;
+  display: block;
+  margin: 0 auto;
+}
+.login-page{
+  width: 100%;
+}
+.login-container{
+  width: 70%;
+  margin: 10px auto;
+  margin-top: 40px;
+}
+.recipes--stuff{
+  display: flex;
+}
+.Recipe-Info {
+  width: 40%;
+  margin-top: 20px;
+}
+.meta {
+  margin-top: 50px;
+}
+.meta div{
+  display: flex;
+  margin: 10px;
+}
+.meta div p{
+  width: 50%;
+  height: 100%;
+  padding: 5px;
+  background-color: white;
+  color: #333;
+}
+.meta div p:nth-child(2){
+  background-color: #F0716A;
+  color: white;
+}
+.favs{
+  color: white;
+  padding: 15px 30px;
+  margin: 10px;
+  background-color: #CA8865;
+  border: none;
+
+}
+.tag-title{
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.tags{
+  display: flex;
+  flex-wrap: wrap;
+}
+.tags span{
+  background-color: #CA8865;
+  padding: 7px 14px;
+  border-radius: 20px;
+  color: white;
+  margin: 7px;
 }
 @media only screen and (max-width:1000px){
 .indRecipe{

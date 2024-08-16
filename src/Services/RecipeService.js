@@ -31,8 +31,19 @@ export const fetchRandom = async () => {
       const response = await fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${apiKey}`);
       if (!response.ok) throw new Error('Failed to fetch random recipes');
       const data = await response.json();
-      console.log(data)
-      return data.results || [];  // Adjust based on the actual structure
+      return data || [];  // Adjust based on the actual structure
+    } catch (error) {
+      console.error('Error in fetchRandom:', error);
+      return [];  // Handle errors appropriately
+    }
+  };
+
+  export const fetchFavourites = async (favs) => {
+    try {
+      const response = await fetch(`https://api.spoonacular.com/recipes/informationBulk?apiKey=${apiKey}&ids=${favs.toString()}`);
+      if (!response.ok) throw new Error('Failed to fetch random recipes');
+      const data = await response.json();
+      return data || [];  // Adjust based on the actual structure
     } catch (error) {
       console.error('Error in fetchRandom:', error);
       return [];  // Handle errors appropriately
