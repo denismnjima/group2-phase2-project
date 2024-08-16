@@ -1,6 +1,15 @@
 # Culinary Voyage
 
 Culinary Voyage is a React project designed to showcase and search for recipes. It allows users to explore a variety of recipes and provides advanced search capabilities, such as filtering by ingredients.
+## checkout our trello
+<a href="https://trello.com/b/D7GvMmuo/phase-project"> Click here to open </a>
+
+## View the deployed version
+<a href="https://group2-phase2-project.vercel.app/">View Deployed site</a>
+
+## Our Presentation slides
+<a href="https://1drv.ms/p/c/6adf762fec155899/EWaZsA3OH8ZGmrSsxcjfJ7IBp8JYapZbvI9FfIS65YDvgA?e=mcSpba">View Slides</a>
+
 
 ## Running and Testing
 
