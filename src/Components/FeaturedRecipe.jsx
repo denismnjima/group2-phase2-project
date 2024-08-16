@@ -24,7 +24,6 @@ function FeaturedRecipe() {
     <div className="featuredRecipe">
       <img src={random[0].image}/>
       <div className="featured-recipe-content">
-        <h1>featured recipe</h1>
         <h2>{random[0].title}</h2>
         <p>{parse(random[0].summary)}</p>
         <button 
